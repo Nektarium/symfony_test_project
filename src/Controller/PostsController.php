@@ -20,4 +20,31 @@ class PostsController extends AbstractController
             'posts' => $posts,
         ]);
     }
+
+    #[Route('/add', name: 'add')]
+    public function add(): Response
+    {
+        $post = new Post();
+        //dd($post);
+
+        return $this->render('posts/add.html.twig', [
+
+        ]);
+    }
+
+    #[Route('/show', name: 'show')]
+    public function show(): Response
+    {
+        return $this->render('posts/show.html.twig', [
+
+        ]);
+    }
+
+    #[Route('/edit', name: 'edit')]
+    public function edit(): Response
+    {
+        return $this->render('posts/edit.html.twig', [
+
+        ]);
+    }
 }
