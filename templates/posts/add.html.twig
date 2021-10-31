@@ -3,17 +3,6 @@
 {% block title %}Add{% endblock %}
 
 {% block body %}
-    {# <form action="" method="POST">
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input id="title " type="text" name="title" class="form-control" value="">
-        </div>
-        <div class="form-group">
-            <label for="content">Content</label>
-            <textarea class="form-control" id="content" name="content"></textarea>
-        </div> 
-        <div><input type="submit" value="Create" class="btn btn-success"></div>
-    </form> #}
     {{ form_start(post_form, {'attr': {'id': 'post_form'}}) }}
     {{ form(post_form) }}
     {{ form_end(post_form) }}
