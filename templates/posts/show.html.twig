@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ title }}{% endblock %}
+
 {% block body %}
-    SHOW
+    <h3>{{ title }}</h3>
+    <p class="mb-auto">{{ content }}</p>
 {% endblock %}

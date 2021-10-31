@@ -1,15 +1,20 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Edit{% endblock %}
+
 {% block body %}
-    <form action="" method="POST">
+    {# <form action="" method="POST">
         <div class="form-group">
             <label for="title">Title</label>
-            <input id="title " type="text" name="title" class="form-control" value="old title">
+            <input id="title" type="text" name="title" class="form-control" value="{{ title }}">
         </div>
         <div class="form-group">
             <label for="content">Content</label>
-            <textarea class="form-control" id="content" name="content">old content</textarea>
+            <textarea class="form-control" id="content" name="content">{{ content }}</textarea>
         </div> 
-        <div><input type="submit" value="Create" class="btn btn-primary btn-block"></div>
-    </form>
+        <div><input type="submit" value="Save" class="btn btn-success"></div>
+    </form> #}
+    {{ form_start(post_form, {'attr': {'id': 'post_form'}}) }}
+    {{ form(post_form) }}
+    {{ form_end(post_form) }}
 {% endblock %}
